@@ -1,0 +1,75 @@
+@import url('overlay.css');
+html, body {
+    height: 100%;
+}
+
+body {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: white;
+}
+
+.form-auth {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-auth .checkbox {
+    font-weight: 400;
+}
+
+.form-auth .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-auth .form-control:focus {
+    z-index: 2;
+}
+
+.input-top {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-medium {
+    margin-bottom: -1px;
+    border-radius: 0px;
+}
+
+.input-bottom {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.bd-top {
+    margin-bottom: -1px !important;
+    border-top-right-radius: .25rem !important;
+    border-top-left-radius: .25rem !important;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.alert-success {
+    display: none;
+}
+
+.lh-1-2 {
+    line-height: 1.2;
+}

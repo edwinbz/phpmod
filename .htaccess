@@ -1,0 +1,20 @@
+RewriteEngine on
+
+Options -Indexes
+# Only online server with a domain 
+
+<Files ~ "config.php">
+  Deny from all
+</Files>
+
+# Errors Documents
+ErrorDocument 403 /phpmod/src/errors/403.php
+ErrorDocument 404 /phpmod/src/errors/404.php
+
+# Redireccionamiento
+RewriteCond %{HTTP_HOST} ^phpmod.com [NC]
+RewriteRule ^(.*)$ http://www.phpmod.com/$1 [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [NC,L,QSA]
