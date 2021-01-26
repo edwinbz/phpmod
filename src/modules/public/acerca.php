@@ -1,6 +1,3 @@
-<?php
-$rol = isset($_SESSION['user_rol']) ? $_SESSION['user_rol'] : null;
-?>
 <!doctype html>
 <html lang="es">
 
@@ -18,12 +15,9 @@ $rol = isset($_SESSION['user_rol']) ? $_SESSION['user_rol'] : null;
 
 <body>
   <?php include INC . 'navbar.php'; ?>
-  <div class="container">
-
-    <div class="bg-light p-5 mt-5 rounded">
-      <h1>Inicio</h1>
-      <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quis voluptatum doloremque quas reiciendis et temporibus a natus dicta, autem, illo esse? Exercitationem atque ea placeat dolor distinctio iusto laborum?</p>
-    </div>
+  <div class="container pt-5">
+    <h1>Acerca de</h1>
+    <a href="https://github.com/edwinbz/phpmod">https://github.com/edwinbz/phpmod</a>
   </div>
 
 
@@ -33,4 +27,4 @@ $rol = isset($_SESSION['user_rol']) ? $_SESSION['user_rol'] : null;
     crossorigin="anonymous"></script>
 </body>
 
-</html>
+</html

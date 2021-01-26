@@ -1,7 +1,7 @@
 <?php
 define("ROOT_DEV", "phpmod/");
 define("ROOT_PRO", "");
-define('DOMAIN_PRO', 'www.phpmod.com');
+define('DOMAIN_PRO', 'phpmod.epizy.com');
 define("DEFAULT_VIEW", 'inicio');
 
 #PHP
@@ -11,7 +11,7 @@ date_default_timezone_set('America/Bogota');
 $fecha = new DateTime();
 
 #APP
-define('APP_NAME', 'PHPMOD');
+define('APP_NAME', 'PHPMod');
 define("APP_DESCRIPTION", "PHP Modular Template");
 define("APP_VERSION", "1.0.0");
 define("APP_AUTOR", "Edwin Bautista");
@@ -22,8 +22,8 @@ define("APP_YEAR", date('Y'));
 define("APP_TIMESTAMP", $fecha->getTimestamp());
 define("APP_DEBUG", true);
 define('APP_PRO', ("$_SERVER[HTTP_HOST]" == DOMAIN_PRO)); // Automatic detection of production mode
-define("APP_HOSTS", array('localhost', '192.168.0.13', '127.0.0.1', '192.168.0.15', 'www.phpmod.com')); // Comm hosts allowed
-define('APP_ORIGINS', array('http://localhost', 'https://www.phpmod.com', 'http://192.168.0.15'));
+define("APP_HOSTS", array('localhost', '192.168.0.13', '127.0.0.1', '192.168.0.15', 'phpmod.epizy.com')); // Comm hosts allowed
+define('APP_ORIGINS', array('http://localhost', 'https://phpmod.epizy.com', 'http://192.168.0.15'));
 define('APP_KEY', 'c5b2b98e9fa644d9b6fe0b2235da225d');
 define("APP_ROOT", (APP_PRO) ? ROOT_PRO : ROOT_DEV);
 
@@ -49,10 +49,10 @@ define("DBD_PASS", "");
 define("DBD_NAME", "phpmod");
 
 #Database Production
-define('DBP_HOST', 'localhost');
-define("DBP_USER", "admin");
-define("DBP_PASS", "@d4t4b4s3admin");
-define("DBP_NAME", "phpmod");
+define('DBP_HOST', 'sql110.epizy.com');
+define("DBP_USER", "epiz_27778472");
+define("DBP_PASS", "Sc5Ucx26pcDEp7");
+define("DBP_NAME", "epiz_27778472_phpmod");
 
 #Database Mode
 define('DB_HOST', (APP_PRO) ? DBP_HOST : DBD_HOST);

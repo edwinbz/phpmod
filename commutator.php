@@ -33,7 +33,7 @@ $path = preg_split("@/@", $path, null, PREG_SPLIT_NO_EMPTY);
 
 // Verifica solicitud
 if ($path == null || count($path) != 2) {
-    Modules::returnBadRequest("El path de la solicitud esta incorrecto");
+    Modules::returnBadRequest("El path de la solicitud es incorrecto");
 }
 
 $mod = $path[0]; // Módulo

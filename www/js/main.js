@@ -1,6 +1,6 @@
 const _rootPro = "";
 const _rootDev = "phpmod/";
-const _domainPro = 'www.phpmod.com';
+const _domainPro = 'phpmod.epizy.com';
 const _root = (window.location.hostname == _domainPro) ? _rootPro : _rootDev;
 const _host = location.protocol + '//' + window.location.hostname + '/' + _root;
 const _comm = _host + "commutator.php";

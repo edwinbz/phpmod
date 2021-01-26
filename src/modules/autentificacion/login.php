@@ -17,7 +17,10 @@
           <h1 class="h3 mb-3 font-weight-normal">Iniciar sesión</h1>
           <input type="text" id="user" class="form-control input-top" placeholder="Usuario o correo electrónico" required autofocus>
           <input type="password" id="pass" autocomplete="" class="form-control input-bottom" placeholder="Contraseña" required>
-          <button id="btnSubmit" class="btn btn-lg btn-primary btn-block" type="submit">Continuar</button>
+          <div class="d-grid">
+            <button id="btnSubmit" class="btn btn-lg btn-primary btn-block" type="submit">Continuar</button>
+          </div>
+
           <div class="mt-3 mb-2 clearfix">
               <!--<a href="<?=HOST?>signin/" class="mr-2">Registrate</a>-->
               <a href="<?= HOST ?>recover/">¿Olvidaste tu contraseña?</a>

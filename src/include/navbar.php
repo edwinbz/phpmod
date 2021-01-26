@@ -14,6 +14,9 @@ $rol = isset($_SESSION['user_rol']) ? $_SESSION['user_rol'] : null;
           <a class="nav-link <?=_isActive('inicio')?>" aria-current="page" href="<?=HOST?>inicio">Inicio</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link <?=_isActive('acerca')?>" aria-current="page" href="<?=HOST?>acerca">Acerca de</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link <?=_isActive('dashboard')?>" aria-current="page" href="<?=HOST?>dashboard">Dashboard</a>
         </li>
       </ul>
