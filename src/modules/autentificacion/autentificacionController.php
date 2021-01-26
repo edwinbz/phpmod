@@ -36,10 +36,11 @@ class AutentificacionController
                 2 => count(explode(" ", $cs[1])) > 0 ? explode(" ", $cs[1])[0] : '',
                 3 => count(explode(" ", $cs[2])) > 0 ? explode(" ", $cs[2])[0] : '',
             );
+            // Redirecciona segun rol
             $open = '';
             switch ($cs[3]) {
                 case '1':
-                    $open = 'dashboard/';
+                    $open = 'inicio/';
                     break;
                 default:
                     break;

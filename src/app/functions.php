@@ -39,7 +39,7 @@ function _val(string $index, $required = true, $default = null)
 }
 
 // Ejecutar consultas MySQL
-function _query($sql, $parameters, $responseType, $operationType = null)
+function _query($sql, $parameters, $responseType, $operationType = null, $isAjax = true)
 {
     switch ($responseType) {
         case 1: //FETCH_ASSOC
@@ -49,9 +49,18 @@ function _query($sql, $parameters, $responseType, $operationType = null)
                 return $stm->fetchAll(PDO::FETCH_ASSOC);
             } catch (PDOException $e) {
                 if (APP_DEBUG) {
-                    _response(false, $e->getMessage(), [], ERROR_PDO);
+                    if ($isAjax) {
+                        _response(false, $e->getMessage(), [], ERROR_PDO);
+                    } else {
+                        echo $e->getMessage();
+                    }
+
                 } else {
-                    _response(false, "Se produjo un error en el servidor.", [], ERROR_PDO);
+                    if ($isAjax) {
+                        _response(false, "Se produjo un error en el servidor.", [], ERROR_PDO);
+                    } else {
+                        echo "Se produjo un error en el servidor.";
+                    }
                 }
             }
             break;
@@ -62,9 +71,18 @@ function _query($sql, $parameters, $responseType, $operationType = null)
                 return $stm->fetchAll(PDO::FETCH_NUM);
             } catch (PDOException $e) {
                 if (APP_DEBUG) {
-                    _response(false, $e->getMessage(), [], ERROR_PDO);
+                    if ($isAjax) {
+                        _response(false, $e->getMessage(), [], ERROR_PDO);
+                    } else {
+                        echo $e->getMessage();
+                    }
+
                 } else {
-                    _response(false, "Se produjo un error en el servidor.", [], ERROR_PDO);
+                    if ($isAjax) {
+                        _response(false, "Se produjo un error en el servidor.", [], ERROR_PDO);
+                    } else {
+                        echo "Se produjo un error en el servidor.";
+                    }
                 }
             }
             break;
@@ -75,9 +93,18 @@ function _query($sql, $parameters, $responseType, $operationType = null)
                 return $stm->rowCount();
             } catch (PDOException $e) {
                 if (APP_DEBUG) {
-                    _response(false, $e->getMessage(), [], ERROR_PDO);
+                    if ($isAjax) {
+                        _response(false, $e->getMessage(), [], ERROR_PDO);
+                    } else {
+                        echo $e->getMessage();
+                    }
+
                 } else {
-                    _response(false, "Se produjo un error en el servidor.", [], ERROR_PDO);
+                    if ($isAjax) {
+                        _response(false, "Se produjo un error en el servidor.", [], ERROR_PDO);
+                    } else {
+                        echo "Se produjo un error en el servidor.";
+                    }
                 }
             }
             break;
@@ -96,7 +123,7 @@ function _query($sql, $parameters, $responseType, $operationType = null)
 function _countTable(string $tableName)
 {
     $sql = "SELECT COUNT(*) FROM $tableName";
-    return _query($sql, [], RES_FETCH_NUM, OPE_READ)[0][0];
+    return _query($sql, [], RES_FETCH_NUM, OPE_READ, false)[0][0];
 }
 
 function _log()

@@ -20,7 +20,7 @@ $rol = isset($_SESSION['user_rol']) ? $_SESSION['user_rol'] : null;
 
 <body>
   <?php include INC . 'navbar.php';?>
-  <div class="container pt-4">
+  <div class="container py-4">
     <h1>Inicio</h1>
     <p>
       <?=APP_DESCRIPTION?>
@@ -80,10 +80,25 @@ $rol = isset($_SESSION['user_rol']) ? $_SESSION['user_rol'] : null;
       <li>Force error 404 <a href="<?=HOST?>xpage/">
           <?=HOST?>xpage/
         </a></li>
-      <li>Force error 403 <a href="<?=HOST?>www">
-          <?=HOST?>www/
-        </a></li>
+      <li>Force error 403: Only when you don't have the right role and the auth is required</li>
     </ul>
+
+    <hr>
+    <h2>Test Global Functions</h2>
+    _countTable('usuarios');
+    <?php
+      require APP . 'database.php';
+      echo _countTable('rol');
+    ?>
+
+    <hr>
+    <h2>Test Plugin</h2>
+    encryptPass('Admin123');
+    <?php
+      require PLU . 'encrypt.php';
+      $encryp = new EncryptPlugin();
+      echo $encryp->encryptPass('Admin123');
+    ?>
   </div>
 
 
