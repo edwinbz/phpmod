@@ -11,21 +11,13 @@ $rol = isset($_SESSION['user_rol']) ? $_SESSION['user_rol'] : null;
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link <?=_isActive('inicio')?>" aria-current="page" href="<?=HOST?>inicio">Inicio</a>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dashboard
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Gestión de usuarios</a></li>
-            <li><a class="dropdown-item" href="#">CRUD simple</a></li>
-            <li><a class="dropdown-item" href="#">CRUD con archivos</a></li>
-          </ul>
+          <a class="nav-link <?=_isActive('inicio')?>" href="<?=HOST?>inicio">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?=_isActive('acerca')?>" aria-current="page" href="<?=HOST?>acerca">Acerca de</a>
+          <a class="nav-link <?=_isActive('crud')?>" href="<?=HOST?>crud">CRUD</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link <?=_isActive('acerca')?>" href="<?=HOST?>acerca">Acerca de</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto mb-2 mb-lg-0">

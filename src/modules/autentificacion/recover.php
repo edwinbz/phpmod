@@ -47,7 +47,9 @@ if($token){
         <div id="form">
             <input type="email" id="user" class="form-control mb-10" placeholder="Correo electrónico registrado" required
                 autofocus>
-            <button id="btnSubmit" class="btn btn-lg btn-primary btn-block" type="submit">Continuar</button>
+            <div class="d-grid">
+                <button id="btnSubmit" class="btn btn-lg btn-primary btn-block" type="submit">Continuar</button>
+            </div>
         </div>
         <?php endif; ?>
         

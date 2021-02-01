@@ -10,14 +10,15 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-  <title>Dashboard - <?=APP_NAME?></title>
+  <title>CRUD - <?=APP_NAME?></title>
 </head>
 
 <body>
   <?php include INC . 'navbar.php'; ?>
   <div class="container pt-5">
-    <h1>Dashboard</h1>
-    <p>CRUD Sample</p>
+    <h1>CRUD</h1>
+    <p>
+    <a href="">Crear</a></p>
 
     <table class="table">
   <thead>
@@ -26,6 +27,8 @@
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Handle</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
     </tr>
   </thead>
   <tbody>
@@ -34,18 +37,24 @@
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
+      <td><a href="">Editar</a></td>
+      <td><a href="">Eliminar</a></td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
+      <td><a href="">Editar</a></td>
+      <td><a href="">Eliminar</a></td>
     </tr>
     <tr>
     <th scope="row">2</th>
       <td>Jacob</td>
       <td>Thornton</td>
       <td>@fat</td>
+      <td><a href="">Editar</a></td>
+      <td><a href="">Eliminar</a></td>
     </tr>
   </tbody>
 </table>
