@@ -1,2 +1,2 @@
 <?php
-Modules::setRoute('crud', 'crud', 'crud.php', true, [1,2]);
+Modules::setRoute('crud', 'crud', 'index.php', true, [1,2]);

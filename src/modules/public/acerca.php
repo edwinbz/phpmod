@@ -17,8 +17,10 @@
   <?php include INC . 'navbar.php'; ?>
   <div class="container pt-5">
     <h1>Acerca de</h1>
-    <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">https://getbootstrap.com/docs/5.0/getting-started/introduction/</a>
-    <a href="https://github.com/edwinbz/phpmod">https://github.com/edwinbz/phpmod</a>
+    <ul>
+      <li><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">https://getbootstrap.com/docs/5.0/getting-started/introduction/</a></li>
+      <li><a href="https://github.com/edwinbz/phpmod">https://github.com/edwinbz/phpmod</a></li>
+    </ul>
 
   </div>
 

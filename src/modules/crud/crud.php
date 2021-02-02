@@ -9,7 +9,7 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="<?=CSS?>crud.css<?=STYLE_VERSION?>">
   <title>CRUD - <?=APP_NAME?></title>
 </head>
 
@@ -17,47 +17,45 @@
   <?php include INC . 'navbar.php'; ?>
   <div class="container pt-5">
     <h1>CRUD</h1>
-    <p>
-    <a href="">Crear</a></p>
+    <p><a href="<?=HOST?>crud/?tab=crear">Crear</a></p>
 
-    <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-      <th scope="col">Editar</th>
-      <th scope="col">Eliminar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td><a href="">Editar</a></td>
-      <td><a href="">Eliminar</a></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td><a href="">Editar</a></td>
-      <td><a href="">Eliminar</a></td>
-    </tr>
-    <tr>
-    <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td><a href="">Editar</a></td>
-      <td><a href="">Eliminar</a></td>
-    </tr>
-  </tbody>
-</table>
+    <?php
+        require_once APP . 'database.php';
+        require_once 'crudModel.php';
+        require_once 'crudController.php';
+        $controller = new CrudController();
+        $productos = $controller->getProductos();
+    ?>
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <thead>
+                <tr class="table-dark">
+                <th>#</th>
+                <th>Marca</th>
+                <th>Nombre</th>
+                <th>Stock</th>
+                <th>Precio</th>
+                <th>Actualizar</th>
+                <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    foreach ($productos as $item) {
+                ?>
+                    <tr>
+                        <td><?=$item['Pro_id']?></td>
+                        <td><?=$item['Pro_marca']?></td>
+                        <td><?=$item['Pro_nombre']?></td>
+                        <td><?=$item['Pro_stock']?></td>
+                        <td>$<?=number_format($item['Pro_precio'])?></td>
+                        <td><a href="<?=HOST?>crud/?tab=actualizar&id=<?=$item['Pro_id']?>">Actualizar</a></td>
+                        <td><a href="<?=HOST?>crud/?tab=eliminar&id=<?=$item['Pro_id']?>">Eliminar</a></td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
   </div>
 
 

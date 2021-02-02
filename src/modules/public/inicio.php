@@ -45,8 +45,8 @@ $rol = isset($_SESSION['user_rol']) ? $_SESSION['user_rol'] : null;
 
     <p>Pages with login required</p>
     <ul>
-      <li><a href="<?=HOST?>dashboard/">
-          <?=HOST?>dashboard/
+      <li><a href="<?=HOST?>crud/">
+          <?=HOST?>crud/
         </a></li>
     </ul>
 
