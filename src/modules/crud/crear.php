@@ -15,7 +15,7 @@
 
 <body>
   <?php include INC . 'navbar.php'; ?>
-  <div class="container pt-5">
+  <div class="container pt-3">
   <h1>CRUD</h1>
   <p>Crear producto</p>
     <form action="" method="post">

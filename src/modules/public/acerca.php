@@ -15,7 +15,7 @@
 
 <body>
   <?php include INC . 'navbar.php'; ?>
-  <div class="container pt-5">
+  <div class="container pt-3">
     <h1>Acerca de</h1>
     <ul>
       <li><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">https://getbootstrap.com/docs/5.0/getting-started/introduction/</a></li>

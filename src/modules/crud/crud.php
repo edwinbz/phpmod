@@ -15,7 +15,7 @@
 
 <body>
   <?php include INC . 'navbar.php'; ?>
-  <div class="container pt-5">
+  <div class="container pt-3">
     <h1>CRUD</h1>
     <p><a href="<?=HOST?>crud/?tab=crear">Crear</a></p>
 
